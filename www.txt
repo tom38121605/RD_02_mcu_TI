@@ -6,3 +6,18 @@
 3. https://wiki.lckfb.com/zh-hans/dmx/beginner/      //初学者网址， 含sdk下载
 
 4. https://wiki.lckfb.com/zh-hans/dmx/module/        //初学者： 一步一步示例说明，含环境搭建，示例讲解
+
+
+
+
+---------------------------以下是bbs论坛-------------------------------
+
+   TI E2E 论坛
+   中文 E2E（国内访问优先，中文发帖）E2E? ...
+   https://e2echina.ti.com/
+
+   全球英文原版 E2E（资料最全，搜索 bug、SDK 问题）TI E2E sup...
+   https://e2e.ti.com/
+
+
+    https://dev.ti.com/tirex/explore/node?node=A__AESdJvYLg1C9HsRT6KnuNA__MSPM0-SDK__a3PaaoK__LATEST
