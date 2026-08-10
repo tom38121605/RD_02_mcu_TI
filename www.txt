@@ -7,7 +7,9 @@
 
 4. https://wiki.lckfb.com/zh-hans/dmx/module/        //初学者： 一步一步示例说明，含环境搭建，示例讲解
 
-
+5. -----keil pack： https://www.keil.arm.com/packs/mspm0g1x0x_g3x0x_dfp-texasinstruments/versions/ 
+5. -----https://www.ti.com/tool/SYSCONFIG
+5. -----13538121605@139.com  (9~8888a~)
 
 
 ---------------------------以下是bbs论坛-------------------------------
