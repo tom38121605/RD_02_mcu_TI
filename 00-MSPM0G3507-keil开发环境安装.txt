@@ -1,0 +1,95 @@
+
+注意：不能使用st-link烧录，会锁死芯片   （锁s后，要用BSL下载方式解锁）
+
+
+0. 账号准备  
+    www.ti.com 用账号登陆后才能下载sdk和sysconfig。 下载时注意不要选jun用，别选错
+
+0. 软件准备：
+
+   。 keil 5.39，keil5.38a      //买开发板会送 5.39
+   。 https://wiki.lckfb.com/zh-hans/dmx/beginner              //初学者网址，含sdk，sysconfig下载
+   。 https://www.ti.com.cn/tool/zh-cn/download/MSPM0-SDK      //全部版本，最新sdk下载 V2_11_00_07           （下载时注意不要选jun用）
+   。 https://www.ti.com/tool/download/SYSCONFIG               //全部版本，最新sysconfig下载 V1.28.0.4712    （下载时注意不要选jun用）
+   。 https://www.keil.arm.com/packs/mspm0g1x0x_g3x0x_dfp-texasinstruments/versions  //全部版本，最新keil的pack包 V1.3.1
+
+
+
+1. 安装 sdk
+   。双击 sdk~.exe
+   。选择安装目录 d:\ti   （安装路径全部英文，无中文、无空格、无括号、无特殊符号）
+
+1. 安装 pack
+   。双击 TexasInstruments.MSPM0G1X0X_G3X0X_DFP.1.3.1.pack ，直接进行安装
+
+1. 安装 sysconfig
+   。双击 sysconfig~.exe
+   。选择安装目录 d:\ti    （安装路径全部英文，无中文、无空格、无括号、无特殊符号）
+
+
+2. 修改配置文件中的路径
+   。进入目录： sdk目录\toos\keil
+   。记事本打开 sycfg.bat, 修改路径x1
+   。记事本打开 ~import.cfg, 修改路径x3
+
+
+3. 在keil中加入sysconfig菜单
+   。菜单tools\customize tools menu\import\选择上面的 ~import.cfg
+   。可看到tools菜单列表下面，多出一栏sysconfig的菜单
+
+
+4. 在keil工程中，通过刚才加入的菜单，打开sysconfig配置界面
+   。打开示例empty
+     . sdk目录\examples\nortos\LP_MSPMOG3507\deiverlib\empty\keil
+     . 点击 .uvprojx，打开keil工程
+
+   。尝试打开sysconfig配置界面
+     . 点击左边栏的文件 empty.syscfg文件
+     . 菜单 tools\点击sysconfig菜单
+     . 弹出sysconfig界面，ok
+
+
+5. 新建自己的工程
+   。建目录  d:\ti\myproject
+             d:\ti\myproject\keil
+   。进入目录 sdkmul  --> 选中下面三个子目录
+     .metadata
+     source
+     tools
+    。copy上面三个目录，到d:\tim\myproject中
+
+
+
+5.添加include ......  (待完成)
+
+5.添加驱动库 driverlib ......  (待完成)
+
+
+   。
+   。
+   。
+   。
+   。
+   。
+   。
+   。
+   。
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+旧版本：    sdk V1_30_00_03 和 sysconfig V1.19.0_3426   （开发板自带资料）
+
+最新版本：  sdk V2_11_00_07 和 sysconfig V1.28.0.4712 
+
+ds推荐版本：SDK v2.02.00.05 和 SysConfig v1.21.x 
+            这个组合的兼容性经过了较多验证，社区反馈也相对正面，可以减少你在环境配置上遇到问题的可能性
+
