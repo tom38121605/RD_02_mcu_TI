@@ -49,20 +49,28 @@
      . 弹出sysconfig界面，ok
 
 
-5. 新建自己的工程
+5. 新建自己的工程myproject
    。建目录  d:\ti\myproject
-             d:\ti\myproject\keil
-   。进入目录 sdkmul  --> 选中下面三个子目录
+   。进入目录 sdk目录  --> 选中下面三个子目录
      .metadata
      source
      tools
     。copy上面三个目录，到d:\tim\myproject中
 
+5. 新建自己的工程myproject
+   建目录d:\ti\myproject\keil
+   。进入目录 。。。  --> 选中下面4个文件
+     empty.c
+     empty.syscfg
+     ti_msp_dl_config.c
+     ti_msp_dl_config.h
+    。copy上面三个目录，到d:\tim\myproject\keil中
 
 
-5.添加include ......  (待完成)
 
-5.添加驱动库 driverlib ......  (待完成)
+6.添加include ......  (待完成)
+
+6.添加驱动库 driverlib ......  (待完成)
 
 
    。
