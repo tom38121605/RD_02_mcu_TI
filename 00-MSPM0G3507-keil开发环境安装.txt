@@ -1,4 +1,4 @@
-
+﻿
 注意：不能使用st-link烧录，会锁死芯片   （锁s后，要用BSL下载方式解锁）
 
 
@@ -7,11 +7,13 @@
 
 0. 软件准备：
 
-   。 keil 5.39，keil5.38a      //买开发板会送 5.39
-   。 https://wiki.lckfb.com/zh-hans/dmx/beginner              //初学者网址，含sdk，sysconfig下载
-   。 https://www.ti.com.cn/tool/zh-cn/download/MSPM0-SDK      //全部版本，最新sdk下载 V2_11_00_07           （下载时注意不要选jun用）
-   。 https://www.ti.com/tool/download/SYSCONFIG               //全部版本，最新sysconfig下载 V1.28.0.4712    （下载时注意不要选jun用）
-   。 https://www.keil.arm.com/packs/mspm0g1x0x_g3x0x_dfp-texasinstruments/versions  //全部版本，最新keil的pack包 V1.3.1
+   。 keil 5.39，keil5.38a 
+
+   。 https://www.keil.com/update/rvmdk.asp                               //keil 所有版本下载     //买开发板会送 5.39
+   。 https://wiki.lckfb.com/zh-hans/dmx/beginner                       //初学者网址，含sdk，sysconfig下载
+   。 https://www.ti.com.cn/tool/zh-cn/download/MSPM0-SDK      //全部版本，最新sdk下载 V2_11_00_07            （下载时注意不要选jun用）
+   。 https://www.ti.com/tool/download/SYSCONFIG                    //全部版本，最新sysconfig下载 V1.28.0.4712    （下载时注意不要选jun用）
+   。 https://www.keil.arm.com/packs/mspm0g1x0x_g3x0x_dfp-texasinstruments/versions     //全部版本，最新keil的pack包 V1.3.1
 
 
 
@@ -30,7 +32,7 @@
 2. 修改配置文件中的路径
    。进入目录： sdk目录\toos\keil
    。记事本打开 sycfg.bat, 修改路径x1
-   。记事本打开 ~import.cfg, 修改路径x3
+   。记事本打开 ~import.cfg, 修改路径x3  版本号 x1  或 x2  （待验证）
 
 
 3. 在keil中加入sysconfig菜单
@@ -49,39 +51,87 @@
      . 弹出sysconfig界面，ok
 
 
-5. 新建自己的工程myproject
+5. 新建自己的工程myproject 之一
+
    。建目录  d:\ti\myproject
    。进入目录 sdk目录  --> 选中下面三个子目录
-     .metadata
-     source
-     tools
-    。copy上面三个目录，到d:\tim\myproject中
+         .metadata
+         source
+         tools 
 
-5. 新建自己的工程myproject
-   建目录d:\ti\myproject\keil
-   。进入目录 。。。  --> 选中下面4个文件
+   。copy上面三个目录，到d:\tim\myproject中
+
+5. 新建自己的工程myproject 之二
+
+   。建目录d:\ti\myproject\keil
+   。进入目录:  SDK目录\examples\nortos\LP_MSPM0G3507\driverlib\empty
+   。把empty复制到目录： "SDK目录\" 里面 
+
+   。选中 “SDK目录\ empty”里面下面4个文件，copy到d:\ti\myproject\keil中
      empty.c
      empty.syscfg
      ti_msp_dl_config.c
      ti_msp_dl_config.h
-    。copy上面三个目录，到d:\tim\myproject\keil中
+
+   。选中 SDK目录\ empty\keil\mspm0cfg3507.sct ，同样copy到d:\ti\myproject\keil中
+
+5. 新建自己的工程myproject 之三
+   。打开keil
+   。菜单project\new project
+   。选择目录:\ti\myproject\keil
+   。输入工程名称prj1
+   。跳出一个选择device的界面
+   。device下拉框中选中 Software Packs
+   。在下面列表中选中Texas Instruments的 MSPM0G3507
+   。点击ok
+   。跳出 software component界面，不要理他，点击cancel
+
+5. 新建自己的工程myproject 之四
+   。点击keil工具栏中的“品字按钮”（魔法棒右边）
+   。跳出manage project items
+   。在中间的groups输入下面2栏：
+        . lib
+        . user
+
+   。选中上面lib，添加驱动文件，在右边的files里，点击下面的"add file"按钮
+   。進入目录 sdk目录\source\ti\driverlib\lib\keil\m0p\mspm0g1x0x_g3x0x
+   。把下面的文件类型调到*.*， 选择driverlib.a文件，点击 “add”按钮
+
+  。选中上面user，添加代码文件，在右边的files里，点击下面的"add file"按钮
+   。進入目录D:\ti\myproject\source\ti\devices\msp\m0p\startup_system_files\keil\
+   。把下面的文件类型调到*.*， 选择startup_mspm0g350x_uvision.s文件，点击 “add”按钮
+
+   。再加入最开始复制的4个文件，点击 “add file”按钮，進入目录“d:\ti\myproject\keil”添加下面4个文件，点击 “add”按钮
+     empty.c
+     empty.syscfg
+     ti_msp_dl_config.c
+     ti_msp_dl_config.h
+
+   。点ok，退出品字界面
 
 
+5. 新建自己的工程myproject 之五
+   。 点中左边栏的empty.syscfg文件 --   右键 option...   --  在file type处选择“text docment file"  -- ok
+   。 点中左边栏的driverlib.a文件 --   右键 option...   --  在file type处选择“library file"  -- ok
 
-6.添加include ......  (待完成)
 
-6.添加驱动库 driverlib ......  (待完成)
+5. 新建自己的工程myproject 之六
+    。魔法棒  --  c/c++  --  在includ处，添加如下路径 
+          .  D:\ti\myproject\source
+          .  D:\ti\myproject\source\third_party\CMSIS\core\include
+    。魔法棒  --  c/c++  -- warning修改为 MISRA compatible
+    。魔法棒  --  c/c++  -- optimization修改为 -o2
+    。魔法棒  --  c/c++  -- define处加一个宏定义： _MSPM03507_
+
+    。魔法棒  -- link  --  把”user memory layout...“前面的勾去掉
+    。魔法棒  -- link  --  把scatter file里面的”.\mspm0g3507.sct“删掉，然后点"..."按钮，选择“ D:\ti\myproject\keil\mspm0cfg3507.sct"， 点ok
+    。编译一下，应该是完全通过
 
 
-   。
-   。
-   。
-   。
-   。
-   。
-   。
-   。
-   。
+5.  新建自己的工程myproject 之七
+     . 点击左边栏的文件 empty.syscfg文件
+     . 菜单 tools\点击sysconfig菜单
+     . 弹出sysconfig界面，ok
  
 
  
@@ -90,7 +140,8 @@
 
 
 
-
+补充： 绝对不要手写修改 ti_msp_dl_config.c，全部硬件参数在sysconfig的图形界面调
+       一般直接拿 SDK 内 examples\nortos\MSPM0G3507 的 keil 工程模板来改，不要从零新建工程。
 
 
 
