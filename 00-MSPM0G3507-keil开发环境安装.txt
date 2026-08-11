@@ -178,8 +178,6 @@
 
 
 
-
-
 补充： 绝对不要手写修改 ti_msp_dl_config.c，全部硬件参数在sysconfig的图形界面调
        一般直接拿 SDK 内 examples\nortos\MSPM0G3507 的 keil 工程模板来改，不要从零新建工程。
 
