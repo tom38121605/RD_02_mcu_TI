@@ -51,6 +51,46 @@
      . 弹出sysconfig界面，ok
 
 
+5.  直接copy现有的empty工程
+   。進入目录“sdk目录\examples\nortos\LP_MSPMOG3507\deiverlib“， 把empty工程copy到 ”sdk目录\“里面
+
+   。在”sdk目录\empty\keil“的目录里，点击 .uvprojx，打开keil工程
+
+
+6.  修改keil配置
+
+    。魔法棒  -- user  --  before build\rebuild  --  把路径 修改为.sysconfig文件新的相对路径 （因为工程empty位置已经改变l）   //或可以在左边栏重新直接导入文件
+       如把..\..\..\..\..\ 改成  ..\..\   （注意是反斜杠 \ ）
+
+    。魔法棒  -- linker  --  misc controls --  把路径 修改为.a文件新的相对路径 （因为工程empty位置已经改变l）    //或可以在左边栏重新直接导入文件
+
+    。魔法棒  --  c/c++  --  在includ处  （考虑相应修改）
+  
+7. 使用sysconfig，添加gpio
+    (略，easy)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================== 新建自己的工程 ============================
+
+
+
 5. 新建自己的工程myproject 之一
 
    。建目录  d:\ti\myproject
@@ -86,14 +126,14 @@
    。点击ok
    。跳出 software component界面，不要理他，点击cancel
 
-5. 新建自己的工程myproject 之四
+5. 新建自己的工程myproject 之四                                     //或可以在左边栏重新直接导入文件
    。点击keil工具栏中的“品字按钮”（魔法棒右边）
    。跳出manage project items
    。在中间的groups输入下面2栏：
         . lib
         . user
 
-   。选中上面lib，添加驱动文件，在右边的files里，点击下面的"add file"按钮
+   。选中上面lib，添加驱动文件，在右边的files里，点击下面的"add file"按钮   
    。進入目录 sdk目录\source\ti\driverlib\lib\keil\m0p\mspm0g1x0x_g3x0x
    。把下面的文件类型调到*.*， 选择driverlib.a文件，点击 “add”按钮
 
@@ -151,4 +191,11 @@
 
 ds推荐版本：SDK v2.02.00.05 和 SysConfig v1.21.x 
             这个组合的兼容性经过了较多验证，社区反馈也相对正面，可以减少你在环境配置上遇到问题的可能性
+
+视频1：  sdk  1.30.00.03 ，   sysconfig  1.19.0.3426     //同旧版本
+
+视频2：  sdk 2.04.00.06  ，   sysconfig  1.23.1.4034
+
+视频3：  sdk 2.01.00.03  ，   sysconfig 1.20.0.3587
+ 
 
