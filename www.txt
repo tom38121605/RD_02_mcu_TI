@@ -12,6 +12,14 @@
 5. -----13538121605@139.com  (9~8888a~)
 
 
+6. 安装视频或官方教程
+
+   https://www.bilibili.com/video/BV1cLGtzcEEr/?spm_id_from=333.337.search-card.all.click&vd_source=1aabf6d13273d470d124a884db6b11d0
+   https://www.bilibili.com/video/BV19noxYCENq/?spm_id_from=333.337.search-card.all.click&vd_source=1aabf6d13273d470d124a884db6b11d0
+   https://www.bilibili.com/video/BV1TQJuzMEsF/?spm_id_from=333.337.search-card.all.click&vd_source=1aabf6d13273d470d124a884db6b11d0
+   https://dev.ti.com/tirex/explore/node?node=A__AESdJvYLg1C9HsRT6KnuNA__MSPM0-SDK__a3PaaoK__LATEST  
+
+
 ---------------------------以下是bbs论坛-------------------------------
 
    TI E2E 论坛
@@ -22,4 +30,4 @@
    https://e2e.ti.com/
 
 
-    https://dev.ti.com/tirex/explore/node?node=A__AESdJvYLg1C9HsRT6KnuNA__MSPM0-SDK__a3PaaoK__LATEST
+    

@@ -9,7 +9,7 @@
 
    。 keil 5.39，keil5.38a 
 
-   。 https://www.keil.com/update/rvmdk.asp                               //keil 所有版本下载     //买开发板会送 5.39
+   。 https://www.keil.com/update/rvmdk.asp                               //keil 所有版本下载     //买地猛星开发板会送 5.39
    。 https://wiki.lckfb.com/zh-hans/dmx/beginner                       //初学者网址，含sdk，sysconfig下载
    。 https://www.ti.com.cn/tool/zh-cn/download/MSPM0-SDK      //全部版本，最新sdk下载 V2_11_00_07            （下载时注意不要选jun用）
    。 https://www.ti.com/tool/download/SYSCONFIG                    //全部版本，最新sysconfig下载 V1.28.0.4712    （下载时注意不要选jun用）
@@ -23,6 +23,7 @@
 
 1. 安装 pack
    。双击 TexasInstruments.MSPM0G1X0X_G3X0X_DFP.1.3.1.pack ，直接进行安装
+     实际本次安装在这个目录： C:\Users\HP\AppData\Local\Arm\Packs
 
 1. 安装 sysconfig
    。双击 sysconfig~.exe
@@ -32,7 +33,7 @@
 2. 修改配置文件中的路径
    。进入目录： sdk目录\toos\keil
    。记事本打开 sycfg.bat, 修改路径x1
-   。记事本打开 ~import.cfg, 修改路径x3  版本号 x1  或 x2  （待验证）
+   。记事本打开 ~import.cfg, 修改路径x3  版本号 x2  （已验证）
 
 
 3. 在keil中加入sysconfig菜单
@@ -51,7 +52,7 @@
      . 弹出sysconfig界面，ok
 
 
-5.  直接copy现有的empty工程
+5.  直接copy现有的empty工程 到sdk目录
    。進入目录“sdk目录\examples\nortos\LP_MSPMOG3507\deiverlib“， 把empty工程copy到 ”sdk目录\“里面
 
    。在”sdk目录\empty\keil“的目录里，点击 .uvprojx，打开keil工程
@@ -72,17 +73,46 @@
 
 
 
+8. 安装视频或官方教程
+
+   1). https://www.bilibili.com/video/BV1cLGtzcEEr/?spm_id_from=333.337.search-card.all.click&vd_source=1aabf6d13273d470d124a884db6b11d0    //绝对路径empty，sysconfig小灯
+   2). https://www.bilibili.com/video/BV19noxYCENq/?spm_id_from=333.337.search-card.all.click&vd_source=1aabf6d13273d470d124a884db6b11d0    //新建工程，只调出sysconfig
+   3). https://www.bilibili.com/video/BV1TQJuzMEsF/?spm_id_from=333.337.search-card.all.click&vd_source=1aabf6d13273d470d124a884db6b11d0    //相对路径empty, 用sysconfig设置小灯
+
+   https://dev.ti.com/tirex/explore/node?node=A__AESdJvYLg1C9HsRT6KnuNA__MSPM0-SDK__a3PaaoK__LATEST  
 
 
 
 
 
 
+========================== 绝对路径的empty示例 ============================
 
 
+5.  直接copy现有的empty工程 到 D:\ti_base_test目录
 
+6. 配置keil
 
+    。魔法棒  -- user  --  before build\rebuild  --  修改为.syscfg.bat的绝对路径
+       cmd.exe /C "D:\ti\mspm0_sdk_2_05_01_00\tools\keil\syscfg.bat '$P' empty.syscfg"
 
+    。魔法棒  -- linker  --  misc controls --  把路径 修改为.a文件的绝对路径
+       D:\ti\mspm0_sdk_2_05_01_00\source\ti\driverlib\lib\keil\m0p\mspm0g1x0x_g3x0x\driverlib.a
+
+    。魔法棒  --  c/c++  --  在includ处  ，把相对路径修改成绝对路径如下：
+       D:\ti\mspm0_sdk_2_05_01_00\source\third_party\CMSIS\Core\Include
+       D:\ti\mspm0_sdk_2_05_01_00\source
+
+7. 打开sysconfig配置界面
+      。点击左边栏的文件 empty.syscfg文件
+      。菜单 tools\点击sysconfig菜单
+      。弹出sysconfig界面 
+      。点击右边的“save”按钮，保存sysconfig相关的3个文件 
+      。选择目录为；   D:\ti_base_test\empty
+      。关闭 sysconfig界面 
+      。跳出一个是否导入新的  sysconfig相关的3个文件 ，选择“yes，load all”
+      。编译，应该compile ok  
+ 
 
 
 
@@ -159,6 +189,9 @@
     。魔法棒  --  c/c++  --  在includ处，添加如下路径 
           .  D:\ti\myproject\source
           .  D:\ti\myproject\source\third_party\CMSIS\core\include
+
+
+5.  新建自己的工程myproject 之七
     。魔法棒  --  c/c++  -- warning修改为 MISRA compatible
     。魔法棒  --  c/c++  -- optimization修改为 -o2
     。魔法棒  --  c/c++  -- define处加一个宏定义： _MSPM03507_
@@ -168,7 +201,7 @@
     。编译一下，应该是完全通过
 
 
-5.  新建自己的工程myproject 之七
+5.  新建自己的工程myproject 之八
      . 点击左边栏的文件 empty.syscfg文件
      . 菜单 tools\点击sysconfig菜单
      . 弹出sysconfig界面，ok
