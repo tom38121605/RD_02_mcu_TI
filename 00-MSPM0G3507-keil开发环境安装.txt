@@ -5,6 +5,11 @@
 0. 账号准备  
     www.ti.com 用账号登陆后才能下载sdk和sysconfig。 下载时注意不要选jun用，别选错
 
+0. 官网搜索开发板
+
+    。打开官网；  www.ti.com
+    。搜索：        MSPM0G3507,    可以看到下面有芯片和评估板，点進评估板查看和购买
+
 0. 软件准备：
 
    。 keil 5.39，keil5.38a 
@@ -113,6 +118,11 @@
       。跳出一个是否导入新的  sysconfig相关的3个文件 ，选择“yes，load all”
       。编译，应该compile ok  
  
+
+8.   打开keil工程
+   。添加组lib，
+      在lib中添加文件 sdk目录\source\ti\driverlib\lib\keil\m0p\mspm0g1x0x_g3x0xdriverlib.a文件
+   。 点中左边栏的driverlib.a文件 --   右键 option...   --  在file type处选择“library file"  -- ok
 
 
 
