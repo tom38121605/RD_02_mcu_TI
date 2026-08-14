@@ -20,6 +20,8 @@
    4). https://dev.ti.com/tirex/explore/node?node=A__AESdJvYLg1C9HsRT6KnuNA__MSPM0-SDK__a3PaaoK__LATEST       //官方教程
 
    5). https://www.bilibili.com/video/BV1Xf421S7BM?spm_id_from=333.788.videopod.sections&vd_source=1aabf6d13273d470d124a884db6b11d0     //外设示例，讲的超级好，堪比江科大
+   6). https://dev.ti.com/tirex/explore/node?isTheia=false&node=A__AEIJm0rwIeU.2P1OBWwlaA__MSPM0-ACADEMY-CN__Gx9d9qT__LATEST              //TI线上培训
+
 
 ---------------------------以下是bbs论坛-------------------------------
 
