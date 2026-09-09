@@ -1,4 +1,6 @@
 ﻿
+0.  https://e2e.ti.com/                         //官方答疑
+
 1. https://pan.baidu.com/s/18j0_RK3Nxm7dJ3TTC74rhw?pwd=LCKF    //evk 百度网盘
 
 2. https://oshwhub.com/li-chuang-kai-fa-ban/li-chuang-di-meng-xing-mspm0g3507-kai-fa-ban   //开源工程网页地址
