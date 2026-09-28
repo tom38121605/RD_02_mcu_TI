@@ -1,4 +1,4 @@
-
+﻿
 0.软件准备：
 
   。安装uniflash_sl.8.7.0.4818.exe （烧写 .elf / .hex / .bin 固件）
@@ -23,7 +23,7 @@
   。选择选择芯片型号：MSPM0G3507‑BOOTLOADER（必须带‑BOOTLOADER 后缀，不带就看不到 UART‑BSL 选项！）
   。点击 Start 进入配置页面
      ，点左边栏的Settings & Utilities标签页  -->  
-        . 设置 COM端口为： COM3
+        . 设置 COM端口为： COM3   （user的com口，一般选两个com口的下面的那个）
         . 往下翻设置波特率为： 9600
         . 往下翻设置擦除，校验等选项  （一般默认有擦除和校验）
 
